@@ -1,0 +1,49 @@
+{
+  "scanner": {
+    "timeout": 10,
+    "max_redirects": 5,
+    "threads": 5,
+    "delay": 1,
+    "user_agents": true,
+    "check_dns": true,
+    "check_whois": false,
+    "check_content": true,
+    "exclude_domain_suffixes": [".edu.cn", ".gov.cn"],
+    "exclude_domains_with_labels": ["edu", "gov"],
+    "exclude_private_ips": true,
+    "exclude_ip_prefixes": ["10.", "192.168.", "172."],
+    "whitelist_urls": [
+        "https://www.12371.cn/",
+        "https://browser.360.cn/"
+    ],
+    "output_format": "json"
+  },
+  "threat_detection": {
+    "malicious_keywords": {
+      "porn": ["porn", "adult", "sex", "xxx", "nude", "naked", "pornography"],
+      "gambling": ["casino", "poker", "bet", "gamble", "lottery", "slot", "bingo"],
+      "pirate": ["torrent", "download", "free movie", "streaming", "pirate", "crack"],
+      "phishing": ["login", "password", "account", "verify", "secure", "banking"],
+      "malware": ["download", "install", "update", "security", "antivirus", "crack"]
+    },
+    "suspicious_domains": [
+      "bit.ly",
+      "tinyurl.com",
+      "goo.gl",
+      "t.co"
+    ],
+    "trusted_domains": [
+      "google.com",
+      "facebook.com",
+      "twitter.com",
+      "linkedin.com",
+      "github.com"
+    ]
+  },
+  "output": {
+    "default_format": "json",
+    "include_evidence": true,
+    "include_recommendations": true,
+    "color_output": true
+  }
+}
